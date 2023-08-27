@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Utils from "../Utils/Utils";
 import useFileCount from "../Utils/useFileCount";
+import { toast } from "react-hot-toast";
 
 const Modal = ({ isOpen, onClose, id }) => {
   const [card] = Utils();
@@ -34,6 +35,7 @@ const Modal = ({ isOpen, onClose, id }) => {
 
       if (response.ok) {
         console.log("Files uploaded successfully");
+        toast.success("File uploaded")
         refetch()
       } else {
         console.log("Error uploading files");
