@@ -28,19 +28,6 @@ const SingleCard = ({ d }) => {
     total_posts,
     _id,
   } = d;
-  //  const {
-  //    data: file,
-  //    isLoading,
-  //    refetch,
-  //  } = useQuery(["fileCount", _id], async () => {
-  //    const response = await fetch(`http://localhost:5000/fileCount/${_id}`);
-  //    if (!response.ok) {
-  //      throw new Error("Network response was not ok");
-  //    }
-  //    const data = await response.json();
-  //    return data;
-  //  });
-   console.log(file);
 
    const openModal = (id) => {
      setModalOpen(true);
