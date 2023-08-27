@@ -6,7 +6,7 @@ const Utils = () => {
   const { isLoading,  data : card = [], refetch } = useQuery({
       queryKey: ["selected data"],
       queryFn: async () => {
-      const res = await axios("http://localhost:5000/data");
+      const res = await axios("https://file-server-wheat.vercel.app/data");
     //   console.log("res from axios", res);
       return res.data;
     },

@@ -28,7 +28,7 @@ const Modal = ({ isOpen, onClose, id }) => {
     // console.log(total_files);
 
     try {
-      const response = await fetch(`http://localhost:5000/upload/${id}`, {
+      const response = await fetch(`https://file-server-wheat.vercel.app/upload/${id}`, {
         method: "POST",
         body: formData,
       });

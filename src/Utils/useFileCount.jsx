@@ -8,7 +8,7 @@ const useFileCount = (_id) => {
     isLoading,
     refetch,
   } = useQuery(queryKey, async () => {
-    const response = await fetch(`http://localhost:5000/fileCount/${_id}`);
+    const response = await fetch(`https://file-server-wheat.vercel.app/fileCount/${_id}`);
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
